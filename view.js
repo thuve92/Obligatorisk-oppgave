@@ -8,8 +8,8 @@ function mainPageView() {
     <img id="henrikpng" src="./pictures/favicon/faviconhenrik.png">
     <input id="mainPageInput" oninput="getData(this.value)"></input>
     <button id="addButton" onclick="saveSeries()">Add!</button>
-    <h1 id="mainPageH1">Welcome to himdb, this is a series page!</h1>
-    <h2 id="mainPageH2">Upcoming Series: </h2>
+    <h1 id="mainPageH1">Welcome to himdb, this is a series page!💕</h1>
+    <h2 id="mainPageH2">UPCOMMING SERIES: </h2>
     <div id="linkOne">${model.movieTrailers[0]}</div>
     <div id="linkTwo">${model.movieTrailers[1]}</div>
     <div id="linkThree">${model.movieTrailers[2]}</div>

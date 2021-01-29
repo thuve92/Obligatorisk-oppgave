@@ -70,10 +70,6 @@ function changeSeriesHelper(index) {
 
 
 
-
-
-
-
 // funksjon for å kunne søke opp en serie. Den vil mest sansynelig ikke
 // bli laget med engang.
 
@@ -81,6 +77,12 @@ function searchForSeries() {
 
 }
 
+// function movieTrailerLoop() {
+//     for (let i = 0; i = model.movieTrailers[i].length; i++) {
+//         model.movieTrailers[i] = model.movieTrailers[i].length;
+//         mainPageView(i);
+//     }
+// }
 
 
 
