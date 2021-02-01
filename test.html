@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Test Suite</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.14.0.css">
+  </head>
+  <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.14.0.js"></script>
+    <script src="model.js"></script>
+    <script src="controller.js"></script>
+    
+    <script>
+        //model
+
+        function mainPageView() {
+
+        }
+
+        function libraryView() {
+
+        }
+
+        QUnit.test('legge til data i modellen', function(assert) {
+                inputTitle = 'warrior';
+                let lengdePåListeFørLagtTil = model.series.length;
+                saveSeries();
+                let actual = model.series.length;
+                let expected = lengdePåListeFørLagtTil +1;
+                assert.deepEqual(actual, expected);
+        });
+
+        
+
+        // viser at funksjonene gjør som de skal med riktig input
+        QUnit.test('Slette data i modellen', function(assert) {
+                let lengdePåListeFørSletting = model.series.length;
+                deleteSeries(1);
+                let actual = model.series.length;
+                let expected = lengdePåListeFørSletting -1;
+                assert.deepEqual(actual, expected);
+        });
+
+        // viser at funksjonene takler ugyldig input på en god måte
+        QUnit.test('Slette data i modellen med ugyldig input', function(assert) {
+                let lengdePåListeFørSlettingBlank = model.series.length;
+                deleteSeries();
+                let actual = model.series.length;
+                let expected = lengdePåListeFørSlettingBlank;
+                assert.deepEqual(actual, expected);
+        });
+
+
+        // Endre navn for riktig og feil input tests.
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

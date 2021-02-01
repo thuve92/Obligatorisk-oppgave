@@ -4,8 +4,8 @@ function homeButton() {
 }
   
 // funksjon for å legge til data i modellen. 
-// Den må kunne legge til informasjon til addSeries.
-// Så må jeg pushe informasjonen i addSeries inn i modellen.
+// Den må kunne legge til informasjon til newSeries.
+// Så må jeg pushe informasjonen i newSeries inn i modellen.
 
 let inputTitle = '';
 
@@ -15,6 +15,9 @@ function getData(inputText) {
 // funksjon save series.
 
 function saveSeries() {
+    if (inputTitle == "") {
+        return;
+    }
     let x =  {
         title: inputTitle,
         score: 0,
@@ -50,6 +53,9 @@ function showSeries() {
 // funksjon for å kunne slette en hel serie.
 
 function deleteSeries(index) {
+    if (typeof(index) !== "number") {
+        return;
+    }
     model.series.splice(index, 1);
     libraryView();
 }
