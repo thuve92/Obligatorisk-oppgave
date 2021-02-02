@@ -32,6 +32,14 @@
                 assert.deepEqual(actual, expected);
         });
 
+        QUnit.test('legge til data i modellen med ugyldig input', function(assert) {
+                inputTitle = '';
+                let lengdePåListeFørLagtTilBlank = model.series.length;
+                saveSeries();
+                let actual = model.series.length;
+                let expected = lengdePåListeFørLagtTilBlank;
+                assert.deepEqual(actual, expected);
+        });
         
 
         // viser at funksjonene gjør som de skal med riktig input

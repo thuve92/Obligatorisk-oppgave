@@ -828,29 +828,3 @@ function searchForSeries() {
 
 
 
-console.log('ERIK')
-console.log('ER')
-console.log('BEST')
-console.log('<3')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// funksjon for å kunne søke opp en serie. Den vil mest sansynelig ikke
